@@ -1,0 +1,69 @@
+.btn {
+  color: #000;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 1rem 0rem;
+  padding: 0.7rem 1.5rem !important;
+  background-color: #ffff00;
+  border: 4px solid #000;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: inline-block !important;
+  position: relative;
+  transform: rotate(-2deg);
+  transition: all 0.3s;
+  box-shadow: 5px 5px 0px #000;
+}
+
+.btn:hover {
+  background-color: #ffff66;
+  transform: rotate(0deg) translate(2px, 2px);
+  box-shadow: 3px 3px 0px #000;
+}
+
+.btn:active {
+  transform: rotate(0deg) translate(4px, 4px);
+  box-shadow: 0px 0px 0px #000;
+}
+
+.btn-blue {
+  background-color: #4169e1;
+  color: #fff;
+}
+
+.btn-blue:hover {
+  background-color: #6495ed !important;
+  color: #fff !important;
+}
+
+/* Additional neo-brutalism styles */
+.btn::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: repeating-linear-gradient(
+    45deg,
+    #000,
+    #000 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  z-index: -1;
+  border-radius: 0.7rem;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background-color: inherit;
+  z-index: -1;
+  border-radius: 0.3rem;
+}

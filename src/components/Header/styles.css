@@ -1,0 +1,44 @@
+:root {
+    --theme: #a2667a; 
+    --white: #ffffff;
+    --border-color: #000000; 
+}
+
+.navbar {
+    background-color: var(--theme);
+    padding: 1rem 1.5rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    border-bottom: 4px solid var(--border-color); 
+    box-shadow: 4px 4px 0 var(--border-color); 
+}
+
+.logo {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.2rem; 
+    margin: 0;
+    text-transform: uppercase; 
+}
+
+.link {
+    opacity: 1; 
+    color: var(--white);
+    font-weight: 600; 
+    cursor: pointer;
+    border: 2px solid var(--border-color); 
+    padding: 0.5rem 1rem; 
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.link:hover {
+    background-color: var(--white); 
+    color: var(--theme);
+    box-shadow: 4px 4px 0 var(--border-color);
+}

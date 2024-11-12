@@ -1,0 +1,31 @@
+.signup-wrapper {
+    width: 70%;
+    max-width: 450px;
+    padding: 1rem 1.5rem;
+    background-color: #ffffff; /* Flat, neutral background */
+    border: 3px solid #000000; /* Bold black border for a brutalist feel */
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.9); /* Strong shadow for depth */
+    border-radius: 0; /* Remove rounded corners */
+}
+
+.title {
+    font-weight: 700; /* Bold font weight for impact */
+    font-size: 1.5rem; /* Slightly larger font for emphasis */
+    text-align: center;
+    color: #000000; /* High-contrast black text */
+    margin-bottom: 1rem;
+}
+
+.p-login {
+    text-align: center;
+    margin: 0;
+    font-weight: 400; /* Slightly increased weight for contrast */
+    font-size: 0.9rem;
+    color: #000000; /* High-contrast black */
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.p-login:hover {
+    color: #ff0000; /* Bold color change on hover */
+}

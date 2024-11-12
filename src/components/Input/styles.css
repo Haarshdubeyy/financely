@@ -1,0 +1,32 @@
+.input-wrapper {
+    margin-bottom: 1.5rem;
+}
+
+.label-input {
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #000; /* High contrast color */
+}
+
+.custom-input {
+    border: 2px solid #000; /* Bold, solid border for brutalist look */
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    background-color: #fff; /* Flat background */
+    color: #000; /* High contrast text */
+    opacity: 1;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.8); /* Harsh shadow for depth */
+    transition: background-color 0.3s;
+}
+
+.custom-input:focus {
+    outline: none;
+    background-color: #f0f0f0; /* Slight background change on focus */
+}
+
+.custom-input::placeholder {
+    color: #666; /* Slightly darker placeholder for contrast */
+}
