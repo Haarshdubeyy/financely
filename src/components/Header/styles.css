@@ -6,7 +6,7 @@
 
 .navbar {
     background-color: var(--theme);
-    padding: 1rem 1.5rem;
+    padding: 1rem .5rem;
     position: sticky;
     top: 0;
     left: 0;
@@ -15,7 +15,7 @@
     align-items: center;
     z-index: 999;
     border-bottom: 4px solid var(--border-color); 
-    box-shadow: 4px 4px 0 var(--border-color); 
+    box-shadow:4px 0 var(--border-color); 
 }
 
 .logo {

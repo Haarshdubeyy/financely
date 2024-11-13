@@ -35,7 +35,7 @@ function Header () {
 
   return (
     <div className='navbar'>
-      <p className='logo' onClick={()=>alert(`This does'nt work 🐱`)}>FINANCELY.</p>
+      <p className='logo' onClick={()=>alert(`This don't work 🐱`)}>FINANCELY.</p>
       {user && <p className='logo link' onClick={logout}>LogOut</p>}
     </div>
   )
