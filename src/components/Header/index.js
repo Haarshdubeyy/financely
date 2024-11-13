@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
 import { toast } from 'react-toastify';
 
+
 function Header () {
 
   const [user, loading] = useAuthState(auth);
@@ -34,10 +35,13 @@ function Header () {
   };
 
   return (
-    <div className='navbar'>
+
+      <div className='navbar'>
       <p className='logo' onClick={()=>alert(`This don't work 🐱`)}>FINANCELY.</p>
       {user && <p className='logo link' onClick={logout}>LogOut</p>}
     </div>
+    
+
   )
 }
 

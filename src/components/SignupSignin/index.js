@@ -79,14 +79,13 @@ function SignupSignin () {
 
   async function createDoc (user) {
     setLoading(true);
-    //make sure user with the uid does not exist
-    // create a doc
+
 
     if (!user) return;
 
     const userRef = doc(db, "users", user.uid);
     const userData = await getDoc(userRef);
-    if (!userData.exists()) {  //creating doc only when the doc does not exist.
+    if (!userData.exists()) {  
       try {
       await setDoc(doc(db, "users", user.uid), {
         name: user.displayName ? user.displayName : name,
@@ -137,10 +136,10 @@ function SignupSignin () {
       {loginForm ?
         <>
           <div className='signup-wrapper'>
-            <h2 className='title'>Login to  <span style={{ color: "var(--theme)" }}>FinTrack.</span></h2>
+            <h2 className='title'>Login to <span style={{ color: "var(--theme)" }}>FinTrack.</span></h2>
             <form>
-              <Input type='email' label='Email' state={email} setState={setEmail} placeholder='johndoe@gmail.com' />
-              <Input type='password' label='Password' state={password} setState={setPassword} placeholder='johndoe123' t />
+              <Input type='email' label='Email' state={email} setState={setEmail} placeholder='Name@gmail.com' />
+              <Input type='password' label='Password' state={password} setState={setPassword} placeholder='Password' t />
               <Button text={loading ? "Loading..." : 'Login using Email and Password'} onClick={loginUsingEmail} disabled={loading} />
               <p className='p-login'>or</p>
               <Button onClick={googleAuth} text={loading ? "Loading..." : 'Login using Google'} blue={true} />
@@ -152,10 +151,10 @@ function SignupSignin () {
         <div className='signup-wrapper'>
           <h2 className='title'>Sign Up on <span style={{ color: "var(--theme)" }}>FinTrack.</span></h2>
           <form>
-            <Input label='Full Name' state={name} setState={setName} placeholder='John Doe' />
-            <Input type='email' label='Email' state={email} setState={setEmail} placeholder='johndoe@gmail.com' />
-            <Input type='password' label='Password' state={password} setState={setPassword} placeholder='johndoe123'  />
-            <Input type='password' label='Confirm Password' state={confirmPassword} setState={setConfirmPassword} placeholder='johndoe123' />
+            <Input label='Full Name' state={name} setState={setName} placeholder='Name' />
+            <Input type='email' label='Email' state={email} setState={setEmail} placeholder='Name@gmail.com' />
+            <Input type='password' label='Password' state={password} setState={setPassword} placeholder='Password'  />
+            <Input type='password' label='Confirm Password' state={confirmPassword} setState={setConfirmPassword} placeholder='Confirm Password' />
             <Button text={loading ? "Loading..." : 'SignUp using Email and Password'} onClick={signupWithEmail} disabled={loading} />
             <p className='p-login'>or</p>
             <Button onClick={googleAuth} text={loading ? "Loading..." : 'SignUp using Google'} blue={true} />
@@ -169,4 +168,3 @@ function SignupSignin () {
 export default SignupSignin;
 
 
-//Doc is created at signup only.
